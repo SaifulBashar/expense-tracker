@@ -21,8 +21,14 @@ export function History({ list }: { list: historyType[] }) {
                       : "border-green-600"
                   } rounded shadow`}
                 >
-                  <span data-testid={"text"}>{item.text}</span>
-                  <span data-testid={"amount"}>
+                  <div>
+                    <p data-testid={"text"}>{item.text}</p>
+                    <p className={"text-sm text-gray-600"}>
+                      {new Date(item.id).toLocaleString()}
+                    </p>
+                  </div>
+
+                  <span data-testid={"amount"} className={"font-bold"}>
                     {renderAmount(item.type, item.amount)}
                   </span>
                 </div>

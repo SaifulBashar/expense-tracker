@@ -2,7 +2,6 @@ import { ExpenseForm } from "./components/Form";
 import { History } from "./components/History";
 import { useExpenseTracker } from "./hooks/useExpenseTracker";
 import { DarkMode } from "./components/DarkMode";
-import { stat } from "fs";
 
 function App() {
   const [state, actions] = useExpenseTracker();
