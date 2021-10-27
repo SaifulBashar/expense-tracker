@@ -72,7 +72,10 @@ export function useExpenseTracker(): [
     if (Number(amount) > 0) {
       dispatch({
         type: "set_income",
-        payload: { text, amount: amount.substring(1) },
+        payload: {
+          text,
+          amount: amount.startsWith("+") ? amount.substring(1) : amount,
+        },
       });
     }
     if (Number(amount) < 0) {

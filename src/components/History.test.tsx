@@ -9,7 +9,7 @@ const history: historyType[] = [
   { amount: 5, id: "5", text: "GYM", type: "income" },
 ];
 describe("History component", () => {
-  function renderOfficeCharacters() {
+  function renderHistory() {
     render(<History list={history} />);
 
     return {
@@ -23,7 +23,7 @@ describe("History component", () => {
   }
 
   test("Rendering transaction history", async () => {
-    const { getCharacters } = renderOfficeCharacters();
+    const { getCharacters } = renderHistory();
     getCharacters().forEach((item) => {
       expect(
         history.findIndex((list) => {

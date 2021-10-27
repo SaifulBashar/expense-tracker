@@ -28,7 +28,7 @@ export function ExpenseForm({
         <Form>
           <label className="block w-full">
             <span className="block mb-1 text-sm text-gray-800 dark:text-white">
-              Text
+              Transaction name
             </span>
             <Field
               type="text"

@@ -10,12 +10,12 @@ export function History({ list }: { list: historyType[] }) {
         History
       </h4>
       {list.length ? (
-        <ul>
+        <ul style={{ maxHeight: 250 }} className={"overflow-y-auto"}>
           {list.map((item) => {
             return (
               <li key={item.id} data-testid={"history"}>
                 <div
-                  className={`flex justify-between p-3 mb-3 bg-white border-r-4 ${
+                  className={`flex justify-between p-3 mb-3 bg-white dark:bg-gray-600 border-r-4 ${
                     item.type === "expense"
                       ? "border-red-600"
                       : "border-green-600"
