@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { HiOutlineLightBulb } from "react-icons/hi";
-import { MdOutlineDarkMode } from "react-icons/all";
+import { MdOutlineDarkMode } from "react-icons/md";
 
 export function DarkMode() {
   const [theme, setTheme] = useState("light");
@@ -29,6 +29,7 @@ export function DarkMode() {
     return (
       <div className="flex justify-end">
         <button
+          aria-label="light_mode"
           className="border-2 border-gray-700 rounded-full dark:border-white"
           onClick={() => toggleTheme("light")}
         >
@@ -40,6 +41,7 @@ export function DarkMode() {
     return (
       <div className="flex justify-end">
         <button
+          aria-label="dark_mode"
           className="border-2 border-gray-700 rounded-full dark:border-white"
           onClick={() => toggleTheme("dark")}
         >

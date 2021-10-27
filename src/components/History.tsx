@@ -13,7 +13,7 @@ export function History({ list }: { list: historyType[] }) {
         <ul>
           {list.map((item) => {
             return (
-              <li key={item.id}>
+              <li key={item.id} data-testid={"history"}>
                 <div
                   className={`flex justify-between p-3 mb-3 bg-white border-r-4 ${
                     item.type === "expense"
@@ -21,8 +21,10 @@ export function History({ list }: { list: historyType[] }) {
                       : "border-green-600"
                   } rounded shadow`}
                 >
-                  <span>{item.text}</span>
-                  <span>{renderAmount(item.type, item.amount)}</span>
+                  <span data-testid={"text"}>{item.text}</span>
+                  <span data-testid={"amount"}>
+                    {renderAmount(item.type, item.amount)}
+                  </span>
                 </div>
               </li>
             );
